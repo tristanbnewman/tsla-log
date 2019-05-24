@@ -1,0 +1,45 @@
+.form{
+    height: fit-content;
+    width: 100vw;
+    border-bottom: 2px solid gainsboro;
+    border-top: 2px solid gainsboro;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+.form p{
+  font-size: 12px;
+  margin: 10px;
+  height: fit-content;
+  align-self: center;
+}
+
+.form button{
+  margin: 0px;
+  color: white;
+  font-weight: bold;
+  background-color: #b71540;
+  border-radius: 20px;
+  height: 25px;
+  margin: 10px;
+  border: none;
+}
+
+.form input{
+  width: fit-content;
+  height: 20px;
+  margin: 10px;
+  align-self: center;
+}
+
+.form select{
+  height: fit-content;
+  align-self: center;
+}
+
+.form button:disabled{
+  background-color: lightcoral;
+}

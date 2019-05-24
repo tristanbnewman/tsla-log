@@ -1,0 +1,7 @@
+.report-list{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }

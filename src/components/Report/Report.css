@@ -1,0 +1,21 @@
+.report{
+    height: 10vh;
+    width: 90vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    border-bottom: 2px solid gainsboro;
+    padding: 5px;
+}
+
+.form-btn{
+    height: fit-content;
+    width: fit-content;
+    margin: 2px;
+    background: transparent;
+    border: none;
+}
+
+.form-btn:hover{
+    cursor: pointer;
+}
