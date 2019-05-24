@@ -78,7 +78,7 @@ class ReportList extends Component{
                     estPeriod={"Period: " + report.estPeriod + " days "}
                     date={"Trade date: "+ report.date}
                     tradeType={report.tradeType}
-                    tradePoint={"Trade point "+ report.tradePoint}
+                    tradePoint={"Trade point: "+ report.tradePoint}
                     deleteTrade= {this.props.deleteTrade}
                     edit= {this.toggleEdit}
                 />

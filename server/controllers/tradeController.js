@@ -21,7 +21,12 @@ const readTrades = (req,res) =>{
 
 const addTrade = (req, res) =>{
     let newTrade = req.body
-    console.log(req.body)
+    const tradePrice = req.body.price
+    const tradePointMargin = req.body.tradePoint
+    const tradePointMultiple = 1+tradePointMargin
+    const tradePoint = parseFloat(tradePrice * tradePointMultiple).toFixed(2)
+    newTrade.tradePoint = tradePoint
+    console.log(tradePoint)
     trades.push(newTrade)
     res.json(trades)
 }

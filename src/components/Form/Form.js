@@ -11,7 +11,7 @@ class Form extends Component{
             inputMinPrice: 0,
             inputMaxPrice: 0,
             isBuy: true,
-            inputLimit: 0,
+            inputLimit: 0.04,
         }
     }
 
@@ -41,7 +41,7 @@ class Form extends Component{
     //NETWORKING CALLS
     addTrade(){
         let { inputPrice, inputPeriod, inputMinPrice, inputMaxPrice, isBuy, inputLimit} = this.state
-        const tradeType = isBuy ? 'buy' : 'sell'
+        const tradeType = isBuy ? ' buy ' : ' sell '
 
         const newTrade = {
             price: inputPrice,
@@ -64,7 +64,7 @@ class Form extends Component{
     updateTrade(id){
 
         let { inputPrice, inputPeriod, inputMinPrice, inputMaxPrice, isBuy, inputLimit} = this.state
-        const tradeType = isBuy ? 'buy' : 'sell'
+        const tradeType = isBuy ? ' buy ' : ' sell '
 
         const updatedTrade = {
             price: inputPrice,
@@ -109,7 +109,7 @@ class Form extends Component{
                     <option value=".07">7%</option>
                     <option value=".08">8%</option>
                     <option value=".09">9%</option>
-                    <option value=".10">10%</option>
+                    <option value=".1">10%</option>
                 </select>
                 <button type="submit" disabled={this.props.editing} onClick={()=>{this.addTrade()}}>submit</button>
                 <button type="submit" disabled={!this.props.editing} onClick={()=>{this.updateTrade(this.props.editIndex)}}>submit edit</button>
