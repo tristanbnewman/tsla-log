@@ -92,9 +92,10 @@ Step 3 Create the a basic Swift UI for testing API connection:
 Step 4 Connect Trades View Controller and the API
 * DONE: Open the view controller file and rename it Trades View Controller
 * DONE: Connect the storyboard view to the view controller file in the Attributes inspector
-* Create a swift file in the Model folder named trade and give it the properties of a trade in the SQL table. Give it an init function
-* Create a new trade in the Trades View controller
-* On the ViewLoading fetch the data from the server on localhost: 5050 form the server in the project directory.
+* DONE: Create a swift file in the Model folder named trade and give it the properties of a trade in the SQL table. Give it an init with those properties function
+* DONE: Create a new trade in the Trades View controller in the ViewDidLoad function and print an attribute to console to test the object creation
+* DONE: Go to the info.plist file. Add the 'App Transport Security Settings' attribute. To that attribute add 'Allow Arbutrary Loads' attribute and set it to 'YES'
+* DONE On the ViewDidLoad function fetch the data from the server on localhost: 5050 from the server/ in the project directory. Print the response to console to verify networking request was successful.
 * Send a get request using Alamofire and print the result to verify the networking call is connected to the UI
 * Parse the JSON data and configure the Trade
 * Connect the label outlets to the Trades View Controller and assign there text fields the corresponding values of the new Trade you configured from the response data from the get request.

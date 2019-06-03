@@ -13,6 +13,7 @@
 		6A10D29A22A5A35B0073DD84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A10D29822A5A35B0073DD84 /* Main.storyboard */; };
 		6A10D29C22A5A35C0073DD84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A10D29B22A5A35C0073DD84 /* Assets.xcassets */; };
 		6A10D29F22A5A35C0073DD84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A10D29D22A5A35C0073DD84 /* LaunchScreen.storyboard */; };
+		6A10D2AB22A5BC2E0073DD84 /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A10D2AA22A5BC2E0073DD84 /* Trade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6A10D29B22A5A35C0073DD84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A10D29E22A5A35C0073DD84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A10D2A022A5A35C0073DD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A10D2AA22A5BC2E0073DD84 /* Trade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trade.swift; sourceTree = "<group>"; };
 		868CB88CD505E39ED86F5B8B /* Pods_tsla_log.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tsla_log.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4227611CD5C2EFEBF07CD1E /* Pods-tsla-log.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tsla-log.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tsla-log/Pods-tsla-log.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 		6A10D2A622A5A3B10073DD84 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6A10D2AA22A5BC2E0073DD84 /* Trade.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			files = (
 				6A10D29722A5A35B0073DD84 /* TradesViewController.swift in Sources */,
 				6A10D29522A5A35B0073DD84 /* AppDelegate.swift in Sources */,
+				6A10D2AB22A5BC2E0073DD84 /* Trade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
