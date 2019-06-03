@@ -1,3 +1,9 @@
+*****CONTENTS*****
+* Boiler react content
+* Swift instruction
+* SQL instruction
+
+*Boiler react content
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +72,29 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+*Swift and SQL instruction content
+
+Step 1: Setup the Swift project
+* DONE: Open a one page app project. Assign it the name 'TSLA-log' and the unique bundle identifier
+* DONE: Init podfile, write in Alamofire, SwiftJSON, and SVProgressHud and pod install in terminal
+
+Step 2: Setup the SQL database
+* DONE: Create a trade table with a column for id plus all the attributes stored in the trades data file.
+* DONE: Add the trades from the data file to the SQL database using INSERT INTO
+* DONE: Create a db folder in the project's root directory and add the two sql statements for selecting all trades and creating a new trade to two net files 'get_trades.sql' and 'create_trade.sql' accordingly
+
+Step 3 Create the a basic Swift UI for testing API connection:
+* DONE: Add 3 labels to the blank Swift application named price, date, and period by dragging them onto the view from the object library and changing the value in their identifier
+* DONE: Change the production device to the same model as the testing device. In the General setting for the app, in the upper left hand corner, then the middle pan, change the app platform to iPhone only.
+
+Step 4 Connect Trades View Controller and the API
+* DONE: Open the view controller file and rename it Trades View Controller
+* DONE: Connect the storyboard view to the view controller file in the Attributes inspector
+* Create a swift file in the Model folder named trade and give it the properties of a trade in the SQL table. Give it an init function
+* Create a new trade in the Trades View controller
+* On the ViewLoading fetch the data from the server on localhost: 5050 form the server in the project directory.
+* Send a get request using Alamofire and print the result to verify the networking call is connected to the UI
+* Parse the JSON data and configure the Trade
+* Connect the label outlets to the Trades View Controller and assign there text fields the corresponding values of the new Trade you configured from the response data from the get request.

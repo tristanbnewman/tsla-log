@@ -74,9 +74,9 @@ class ReportList extends Component{
                 return <Report 
                     key={index}
                     id={index}
-                    price={"Price: " + report.price + " "}
-                    estPeriod={"Period: " + report.estPeriod + " days "}
-                    date={"Trade date: "+ report.date}
+                    price={report.price}
+                    estPeriod={report.estPeriod}
+                    date={report.date}
                     tradeType={report.tradeType}
                     tradePoint={"Trade point: "+ report.tradePoint}
                     deleteTrade= {this.props.deleteTrade}

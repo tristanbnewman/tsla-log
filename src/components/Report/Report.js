@@ -5,9 +5,9 @@ const Report = (props) =>{
     let index = props.id
 
     return <article className="report">
-        <p> {props.price}</p>
-        <p> {props.estPeriod}</p>
-        <p> {props.date}</p>
+        <p>Price: {props.price} </p>
+        <p>Period: {props.estPeriod} days</p>
+        <p>Trade date: {props.date}</p>
         <p> {props.tradeType}</p>
         <p>{props.tradePoint}</p>
         <button 
