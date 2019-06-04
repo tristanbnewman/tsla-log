@@ -10,9 +10,10 @@ import Foundation
 
 class Trades {
     
+    var trade = Trade(price: 10.0, date: "1/1/1", period: 10)
     var trades : [Trade]
     
-    init(trades: [Trade]){
-        self.trades = trades
+    init(){
+        self.trades = [self.trade]
     }
 }

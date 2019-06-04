@@ -1,22 +1,29 @@
-let trades = require('../data/trades')
+let trades = []
 
 const readTrades = (req,res) =>{
+    const db = req.app.get('db')
+    console.log('getting trades from db')
 
-    if (req.query.date){
-        const today = new Date()
-        const filterMargin = req.query.date
-        const filterDay = today.setDate(filterMargin)
-
-        const filteredTrades = trades.filter((trade, index)=>{
-            let tradeDate = Date.parse(trade.date)
-            return filterDay < tradeDate
-            
-        })
-
-        res.json(filteredTrades)
-    }else{
+    db.get_trades().then(trades =>{
+        console.log(trades)
         res.json(trades)
-    }
+    })
+
+    // if (req.query.date){
+    //     const today = new Date()
+    //     const filterMargin = req.query.date
+    //     const filterDay = today.setDate(filterMargin)
+
+    //     const filteredTrades = trades.filter((trade, index)=>{
+    //         let tradeDate = Date.parse(trade.date)
+    //         return filterDay < tradeDate
+            
+    //     })
+
+    //     res.json(filteredTrades)
+    // }else{
+    //     res.json(trades)
+    // }
 }
 
 const addTrade = (req, res) =>{

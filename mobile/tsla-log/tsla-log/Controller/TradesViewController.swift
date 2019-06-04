@@ -16,35 +16,39 @@ class TradesViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    var trades = Trades()
+    
     override func viewDidLoad() {
         //Initializing variables
         super.viewDidLoad()
-        var trade1 = Trade(price: 12.1, date: "1/1/1", period: 14)
-        var trades = Trades(trades: [trade1])
         
         //Networking
         Alamofire.request("http://localhost:5050/api/stocks", method: .get).responseJSON { response in
             if response.result.isSuccess {
                 let tradesJSON : JSON = JSON(response.result.value!)
+//                print(tradesJSON)
                 
                 tradesJSON.forEach{trade in
-                    print(trade.1["estPeriod"])
-                    let newTrade = Trade(price: trade.1["price"].floatValue, date: trade.1["date"].stringValue, period: trade.1["estPeriod"].intValue)
-                    trades.trades.append(newTrade)
+//                    print(trade)
+                    let newTrade = Trade(price: trade.1["price"].floatValue, date: trade.1["date"].stringValue, period: trade.1["estimated_period"].intValue)
+                    self.trades.trades.append(newTrade)
                 }
                 
 //                Confirms JSON trades are added to the trades object
-//                print(trades.trades[0].date)
+//                print(trades.trades[1].date)
             }
             else{
                 print(response.result.error!)
             }
+            
+            //Configuring label UI
+            self.periodLabel.text = String(self.trades.trades[1].period)
+            self.dateLabel.text = self.trades.trades[1].date
+            self.priceLabel.text = String(self.trades.trades[1].price)
+            print(self.trades.trades)
         }
         
-        //Configuring label UI
-        periodLabel.text = String(trades.trades[0].period)
-        dateLabel.text = trades.trades[0].date
-        priceLabel.text = String(trades.trades[0].price)
+        print(self.trades.trades)
     }
     
     override func viewDidAppear(_ animated: Bool) {

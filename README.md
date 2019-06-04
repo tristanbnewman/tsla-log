@@ -108,5 +108,15 @@ Step 5 Create the model and attach it to the JSON data
 * DONE Print the Trades array to console to verify the full array was stored in the trades object
 
 Step 6 Load the trades from the database into the api
-* Go to the index.js file in server/
-* 
+* DONE Go to the index.js file in server/
+* DONE In terminal run 'npm install massive dotenv'
+* DONE Create a .env file and save the CONNECTION_STRING to heroku server and SERVER_PORT (as 5050)
+* DONE Import massive and dotenv using config on dotenv, process.env.SERVER_PORT, then process.env.CONNECTION_STRING passed into massive.
+* DONE Open controllers folder and build controller functions to sql files as appropriate for CRUD methods. Test sql functions with controllers in Postico and Postman
+* DONE Connecting massive and initializing database. massive(process.env.CONNECTION_STRING)
+    .then(db =>{
+        app.set('db', db)
+        console.log('Database connected')
+    })
+
+
