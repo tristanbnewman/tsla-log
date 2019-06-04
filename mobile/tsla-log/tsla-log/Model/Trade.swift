@@ -9,17 +9,13 @@
 import Foundation
 
 class Trade{
-    let id : Int
-    let price : Float
-    let date : String
-    let tradeType : String
-    let tradePoint : Float
+    var price : Float
+    var date : String
+    var period : Int
     
-    init(id : Int, price : Float, date : String, tradeType : String, tradePoint : Float){
-        self.id = id
+    init(price : Float, date : String, period : Int){
         self.price = price
         self.date = date
-        self.tradeType = tradeType
-        self.tradePoint = tradePoint
+        self.period = period
     }
 }

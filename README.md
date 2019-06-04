@@ -95,7 +95,18 @@ Step 4 Connect Trades View Controller and the API
 * DONE: Create a swift file in the Model folder named trade and give it the properties of a trade in the SQL table. Give it an init with those properties function
 * DONE: Create a new trade in the Trades View controller in the ViewDidLoad function and print an attribute to console to test the object creation
 * DONE: Go to the info.plist file. Add the 'App Transport Security Settings' attribute. To that attribute add 'Allow Arbutrary Loads' attribute and set it to 'YES'
-* DONE On the ViewDidLoad function fetch the data from the server on localhost: 5050 from the server/ in the project directory. Print the response to console to verify networking request was successful.
-* Send a get request using Alamofire and print the result to verify the networking call is connected to the UI
-* Parse the JSON data and configure the Trade
-* Connect the label outlets to the Trades View Controller and assign there text fields the corresponding values of the new Trade you configured from the response data from the get request.
+* DONE On the ViewDidLoad function fetch the data from the server on localhost: 5050 from the server/ in the project directory.
+* DONE Send a get request using Alamofire and print the result to verify the networking call is connected to the UI
+* DONE Parse the JSON data and configure the Trade accordingly. Print the trade to console to verify it's configuration
+* DONE Add a catch block for the error that prints error to console and alerts the user of a networking error by default
+* DONE Connect the label outlets to the Trades View Controller and assign there text fields the corresponding values of the new Trade you configured from the response data from the get request.
+
+Step 5 Create the model and attach it to the JSON data
+* DONE Create a Swift file named trades in the Model folder, that holds the trades in an array
+* DONE Set Trades to the response data as an array of Trade objects
+* DONE Unpackage on of the trades from the Trades object and show it in the UI
+* DONE Print the Trades array to console to verify the full array was stored in the trades object
+
+Step 6 Load the trades from the database into the api
+* Go to the index.js file in server/
+* 
