@@ -119,4 +119,12 @@ Step 6 Load the trades from the database into the api
         console.log('Database connected')
     })
 
+Step 7 Connect the data all the way from SQL to the simulator View
+* DONE Configure the view outlets in the networking call in viewdidload
 
+Step 8 Create a trades view
+* DONE Drag a table view controller on to the main storyboard
+* DONE Drag the entry point to the nav view controller. segue nav view to table view controller. run the app to test for blank table view
+* Create the TradesTableView extending UIViewController, UITableViewDelegate, and UITableViewDatasource
+* Set self as the datasource and the delegate in the viewDidLoad method
+* 
